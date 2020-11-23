@@ -36,6 +36,30 @@ class Random {
 
 		return json.image;
 	}
+  async koala(){
+    const image = await fetch("https://some-random-api.ml/img/koala");
+    const json = await main.json();
+    if (!json.link) {
+			throw new Error(error);
+		}
+    return json.link;
+  }
+  async birb(){
+    const image = await fetch("https://some-random-api.ml/img/birb");
+    const json = await main.json();
+    if (!json.link) {
+			throw new Error(error);
+		}
+    return json.link;
+  }
+  async fox(){
+    const image = await fetch("https://some-random-api.ml/img/fox");
+    const json = await main.json();
+    if (!json.link) {
+			throw new Error(error);
+		}
+    return json.link;
+  }
 
 	async quote() {
 		const image = await fetch(`${noapikey}${noapikeyEndpoints.quote}`);
