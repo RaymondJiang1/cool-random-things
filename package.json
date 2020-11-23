@@ -1,6 +1,6 @@
 {
 	"name": "cool-random-things",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A package that provides useful stuff for discord bots",
 	"main": "index.js",
 	"scripts": {

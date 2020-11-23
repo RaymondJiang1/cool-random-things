@@ -31,7 +31,17 @@ export declare class Neko {
 }
 
 export declare class Random {
-	meme(): Promise<Client.noapikeyRequestResults>;
+	meme(): Promise<Client.ImageRequestResults>;
+	bear(): Promise<Client.AnimalRequestResults>;
+	panda(): Promise<Client.AnimalRequestResults>;
+	quote(): Promise<Client.QuoteRequestResults>;
+	riddle(): Promise<Client.RiddleRequestResults>;
+	flipText(): Promise<Client.FliptextRequestResults>;
+	generatePassword(): Promise<Client.GeneratePasswordRequestResults>;
+	car(): Promise<Client.ImageRequestResults>;
+	textToBinary(): Promise<Client.TextToBinaryRequestResults>;
+	binaryToText(): Promise<Client.BinaryToTextRequestResults>;
+	coinFlip(): Promise<Client.CoinFlipRequestResults>;
 }
 
 declare namespace Client {
@@ -41,12 +51,39 @@ declare namespace Client {
 	export interface RequestResults {
 		url: string;
 	}
-	export interface noapikeyRequestResults {
+	export interface ImageRequestResults {
 		image: string;
 	}
 	export interface AnimalRequestResults {
 		fact: string;
 		image: string;
+	}
+	export interface QuoteRequestResults {
+		quote: string;
+		author: string;
+	}
+	export interface RiddleRequestResults {
+		question: string;
+		answer: string;
+	}
+	export interface FliptextRequestResults {
+		message: string;
+	}
+	export interface GeneratePasswordRequestResults {
+		password: string;
+		length: number;
+		note: string;
+	}
+	export interface TextToBinaryRequestResults {
+		binary: string;
+	}
+	export interface BinaryToTextRequestResults {
+		text: string;
+	}
+	export interface CoinFlipRequestResults {
+		coin: string;
+		image: string;
+		gif: string;
 	}
 	export interface ChatResults {
 		response: string;
