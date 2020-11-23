@@ -1,0 +1,27 @@
+{
+	"name": "cool-random-things",
+	"version": "1.0.0",
+	"description": "A package that provides useful stuff for discord bots",
+	"main": "index.js",
+	"scripts": {
+		"test": "node index.js",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RaymondJiang1/discord-utils.git"
+	},
+	"keywords": [
+		"cool",
+		"random"
+	],
+	"author": "RaymondJiang1#6464",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RaymondJiang1/discord-utils/issues"
+	},
+	"homepage": "https://github.com/RaymondJiang1/discord-utils#readme",
+	"dependencies": {
+		"node-fetch": "^2.6.1"
+	}
+}

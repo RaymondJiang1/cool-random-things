@@ -1,0 +1,48 @@
+{
+	"nekoslifeEndpoints": {
+		"sfw": {
+			"tickle": "/img/tickle",
+			"slap": "/img/slap",
+			"poke": "/img/poke",
+			"pat": "/img/pat",
+			"neko": "/img/neko",
+			"cat": "/img/meow",
+			"lizard": "/img/lizard",
+			"kiss": "/img/kiss",
+			"hug": "/img/hug",
+			"foxGirl": "/img/fox_girl",
+			"feed": "/img/feed",
+			"cuddle": "/img/cuddle",
+			"why": "/why",
+			"catText": "/cat",
+			"OwOify": "/owoify",
+			"eightball": "/8ball",
+			"fact": "/fact",
+			"nekoGif": "/img/ngif",
+			"kemonomimi": "/img/kemonomimi",
+			"holo": "/img/holo",
+			"smug": "/img/smug",
+			"baka": "/img/baka",
+			"dog": "/img/woof",
+			"spoiler": "/spoiler",
+			"wallpaper": "/img/wallpaper",
+			"goose": "/img/goose",
+			"gecg": "/img/gecg",
+			"avatar": "/img/avatar",
+			"waifu": "/img/waifu"
+		}
+	},
+	"noapikeyEndpoints": {
+		"meme": "/memes",
+		"bear": "/animals/bear",
+		"panda": "/animals/panda",
+		"quote": "/quotes",
+		"riddle": "/riddle",
+		"flipText": "/flip-text",
+		"password": "/password",
+		"car": "/car",
+		"textToBinary": "/binary",
+		"binaryToText": "/binary-text",
+		"coinFlip": "/coin-flip"
+	}
+}
