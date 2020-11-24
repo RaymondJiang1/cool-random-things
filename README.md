@@ -36,3 +36,5 @@ client.on("message", async message => {
 
 client.login('TOKEN');
 ```
+## DOCUMENTATION FOR COOL-RANDOM-THINGS
+
