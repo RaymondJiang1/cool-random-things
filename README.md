@@ -3,3 +3,10 @@
 [![install size](https://packagephobia.now.sh/badge?p=cool-random-things)](https://packagephobia.now.sh/result?p=cool-random-things)
 
 [![NPM](https://nodei.co/npm/cool-random-things.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/cool-random-things/)
+
+# cool-random-things
+
+## Installation
+```
+npm i cool-random-things
+```
