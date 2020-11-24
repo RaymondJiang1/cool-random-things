@@ -16,9 +16,9 @@ Below are the things that this package offers you.
 ```js
 const discord = require("discord.js")
 const client = new discord.Client()
-const { Random } = require("cool-random-things")
+const { Random } = require("cool-random-things") //if you want load the Random Package
 const random = new Random();
-const { Neko } = require("cool-random-things")
+const { Neko } = require("cool-random-things") //if you want load the Neko Package
 const neko = new Neko();
 
 client.on("ready", () => {
