@@ -10,3 +10,29 @@
 ```
 npm i cool-random-things
 ```
+Below are the things that this package offers you.
+# SETUP FOR cool-random-things
+
+```js
+const discord = require("discord.js")
+const client = new discord.Client()
+const { Random } = require("cool-random-things")
+const random = new Random();
+const { Neko } = require("cool-random-things")
+const neko = new Neko();
+
+client.on("ready", () => {
+  console.log("Ready to go")
+})
+
+client.on("message", async message => {
+  if(message.content === "!meme") {
+    let img = await random.meme()
+    message.channel.send(img)
+  }else if(message.content === "!neko"){
+  let img = await neko.neko()
+  message.channel.send(img)
+  });
+
+client.login('TOKEN');
+```
