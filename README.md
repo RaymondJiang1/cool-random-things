@@ -11,7 +11,7 @@
 npm i cool-random-things
 ```
 Below are the things that this package offers you.
-# SETUP FOR cool-random-things
+# SETUP FOR COOL-RANDOM-THINGS
 
 ```js
 const discord = require("discord.js")
