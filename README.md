@@ -56,6 +56,78 @@ let img = await random.meme()
 message.channel.send(img)
 ```
 
+**birb()**: Provides You a Random Birb Images.
+
+```js
+let img = await random.birb()
+message.channel.send(img)
+```
+
+
+**redPanda()**: Provides You a Random RedPanda Images.
+
+```js
+let img = await random.redPanda()
+message.channel.send(img)
+```
+
+**discordMonster()**: Provides You a Random DiscordMonster Images.
+
+```js
+let img = await random.discordMonster()
+message.channel.send(img)
+```
+
+
+**llama()**: Provides You a Random Llama Images.
+
+```js
+let img = await random.llama()
+message.channel.send(img)
+```
+**alpaca()**: Provides You a Random Alpaca Images.
+
+```js
+let img = await random.alpaca()
+message.channel.send(img)
+```
+
+**seal()**: Provides You a Random Seal Images.
+
+```js
+let img = await random.seal()
+message.channel.send(img)
+```
+
+
+**camel()**: Provides You a Random Camel Images.
+
+```js
+let img = await random.camel()
+message.channel.send(img)
+```
+
+**wolf()**: Provides You a Random Wolf Images.
+
+```js
+let img = await random.wolf()
+message.channel.send(img)
+```
+
+**duck()**: Provides You a Random Duck Images.
+
+```js
+let img = await random.duck()
+message.channel.send(img)
+```
+
+**fox()**: Provides You a Random Fox Images.
+
+```js
+let img = await random.fox()
+message.channel.send(img)
+```
+
 **bear()**: Provides You a Random Bear Images.
 
 ```js
@@ -102,6 +174,14 @@ message.channel.send(img)
 
 ```js
 let img = await neko.wink()
+message.channel.send(img)
+```
+
+
+**punch()**: Provides You a Random Punch gif.
+
+```js
+let img = await neko.punch()
 message.channel.send(img)
 ```
 
@@ -158,6 +238,28 @@ message.channel.send(img)
 
 ```js
 let img = await neko.nekogif()
+message.channel.send(img)
+```
+
+**kanna()**: Provides You a Random Kanna Images.
+
+```js
+let img = await neko.kanna()
+message.channel.send(img)
+```
+
+**changemymind()**: Provides You a changemymind Canvas Images.
+**NEED TO USE ARGS MORE DOCS COMMING SOON**
+```js
+let img = await neko.changemymind(Words)
+message.channel.send(img)
+```
+
+
+**animeMemes()**: Provides You a Random Anime Memes Images.
+
+```js
+let img = await neko.animeMemes()
 message.channel.send(img)
 ```
 
