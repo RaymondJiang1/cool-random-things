@@ -14,24 +14,29 @@ Below are the things that this package offers you.
 # SETUP FOR COOL-RANDOM-THINGS
 
 ```js
+const Discord = require("discord.js")
 const discord = require("discord.js")
 const client = new discord.Client()
-const { Random } = require("cool-random-things") //if you want load the Random Package
+const { Random } = require("cool-random-things")
 const random = new Random();
-const { Neko } = require("cool-random-things") //if you want load the Neko Package
+const { Neko } = require("cool-random-things")
 const neko = new Neko();
-
+const prefix = '!'; // just an example, change to whatever you want
 client.on("ready", () => {
   console.log("Ready to go")
 })
 
 client.on("message", async message => {
-  if(message.content === "!meme") {
-    let img = await random.meme()
+    if(!message.content.startsWith(prefix)) return;
+     let args = message.content.slice(prefix.length).trim().split(/ +/g);
+        let cmd;
+        cmd = args.shift().toLowerCase();
+
+  
+  if(cmd === "koala") {
+    let img = await random.koala()
     message.channel.send(img)
-  }else if(message.content === "!neko"){
-  let img = await neko.neko()
-  message.channel.send(img)
+  }
   });
 
 client.login('TOKEN');
@@ -58,6 +63,13 @@ let img = await random.bear()
 message.channel.send(img)
 ```
 
+**koala()**: Provides You a Random Koala Images.
+
+```js
+let img = await random.koala()
+message.channel.send(img)
+```
+
 **panda()**: Provides You a Random Panda Images.
 
 ```js
@@ -78,10 +90,32 @@ message.channel.send(img)
 let img = await neko.smug()
 message.channel.send(img)
 ```
+
 **baka()**: Provides You a Random Baka gif.
 
 ```js
 let img = await neko.baka()
+message.channel.send(img)
+```
+
+**wink()**: Provides You a Random Wink gif.
+
+```js
+let img = await neko.wink()
+message.channel.send(img)
+```
+
+**cry()**: Provides You a Random Cry gif.
+
+```js
+let img = await neko.cry()
+message.channel.send(img)
+```
+
+**coffee()**: Provides You a Random Coffee gif.
+
+```js
+let img = await neko.coffee()
 message.channel.send(img)
 ```
 
