@@ -1,10 +1,7 @@
 const fetch = require('node-fetch'),
 	error = 'No image/gif provided from api',
-	{ noapikey, somerandomapi } = require('../json/domains.json'),
-	{
-		noapikeyEndpoints,
-		somerandomapiEndpoints,
-	} = require('../json/api_endpoints.json');
+	{ noapikey } = require('../json/domains.json'),
+	{ noapikeyEndpoints } = require('../json/api_endpoints.json');
 
 class Random {
 	async meme() {
@@ -39,7 +36,94 @@ class Random {
 
 		return json.image;
 	}
-
+	async koala(){
+		const image = await fetch("https://some-random-api.ml/img/koala");
+		const json = await image.json();
+		if (!json.link) {
+				throw new Error(error);
+			}
+		return json.link;
+	}
+	async birb(){
+		const image = await fetch("https://some-random-api.ml/img/birb");
+		const json = await image.json();
+		if (!json.link) {
+				throw new Error(error);
+			}
+		return json.link;
+	}
+	async fox(){
+		const image = await fetch("https://some-random-api.ml/img/fox");
+		const json = await image.json();
+		if (!json.link) {
+				throw new Error(error);
+			}
+		return json.link;
+	}
+	async redPanda(){
+		const image = await fetch("https://some-random-api.ml/img/red_panda");
+		const json = await image.json();
+		if (!json.link) {
+				throw new Error(error);
+			}
+		return json.link;
+	}
+	async discordMonster(){
+		const image = await fetch("https://apis.duncte123.me/animal/discord-monster");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
+	async llama(){
+		const image = await fetch("https://apis.duncte123.me/animal/llama");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
+	async alpaca(){
+		const image = await fetch("https://apis.duncte123.me/animal/alpaca");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
+	async seal(){
+		const image = await fetch("https://apis.duncte123.me/animal/seal");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
+	async camel(){
+		const image = await fetch("https://apis.duncte123.me/animal/camel");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
+	async wolf(){
+		const image = await fetch("https://apis.duncte123.me/animal/wolf");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
+	async duck(){
+		const image = await fetch("https://apis.duncte123.me/animal/duck");
+		const json = await image.json();
+		if (!json.data.file) {
+				throw new Error(error);
+			}
+		return json.data.file;
+	}
 	async quote() {
 		const image = await fetch(`${noapikey}${noapikeyEndpoints.quote}`);
 		const json = await image.json();
@@ -185,39 +269,6 @@ class Random {
 		}
 
 		return json;
-	}
-
-	async koala() {
-		const image = await fetch(
-			`${somerandomapi}${somerandomapiEndpoints.koala}`
-		);
-		const json = await image.json();
-		if (!json.link) {
-			throw new Error(error);
-		}
-		return json.link;
-	}
-
-	async birb() {
-		const image = await fetch(
-			`${somerandomapi}${somerandomapiEndpoints.bird}`
-		);
-		const json = await image.json();
-		if (!json.link) {
-			throw new Error(error);
-		}
-		return json.link;
-	}
-
-	async fox() {
-		const image = await fetch(
-			`${somerandomapi}${somerandomapiEndpoints.fox}`
-		);
-		const json = await image.json();
-		if (!json.link) {
-			throw new Error(error);
-		}
-		return json.link;
 	}
 }
 
