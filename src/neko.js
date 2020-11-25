@@ -1,3 +1,5 @@
+const Discord = require("discord.js")
+const client = new Discord.Client()
 const fetch = require('node-fetch'),
 	{ nekoslife } = require('../json/domains.json'),
 	{ nekoslifeEndpoints } = require('../json/api_endpoints.json'),
@@ -309,30 +311,111 @@ class Neko {
 
 		return json.owo;
 	}
-
-	async eightball() {
-		const image = await fetch(
-			`${nekoslife}${nekoslifeEndpoints.sfw.eightball}`
-		);
+	async holo(){
+		const image = await fetch("https://nekobot.xyz/api/image?type=holo");
 		const json = await image.json();
-
+		if (!json.message) {
+				throw new Error(error);
+			}
+		return json.message;
+	}
+	async wink(){
+		const image = await fetch("https://some-random-api.ml/animu/wink");
+		const json = await image.json();
+		if (!json.link) {
+				throw new Error(error);
+			}
+		return json.link;
+	}
+	async punch(){
+		const image = await fetch("https://neko-love.xyz/api/v1/punch");
+		const json = await image.json();
 		if (!json.url) {
-			throw new Error(error);
-		}
-
+				throw new Error(error);
+			}
 		return json.url;
 	}
-
-	async fact() {
-		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.fact}`);
+	async cry(){
+		const image = await fetch("https://neko-love.xyz/api/v1/cry");
 		const json = await image.json();
+		if (!json.url) {
+				throw new Error(error);
+			}
+		return json.url;
+	}
+	async coffee(){
+		const image = await fetch("https://nekobot.xyz/api/image?type=coffee");
+		const json = await image.json();
+		if (!json.message) {
+				throw new Error(error);
+			}
+		return json.message;
+	}
+	async kanna(){
+		const image = await fetch("https://nekobot.xyz/api/image?type=kanna");
+		const json = await image.json();
+		if (!json.message) {
+				throw new Error(error);
+			}
+		return json.message;
+	}
+		async eightball() {
+			const image = await fetch(
+				`${nekoslife}${nekoslifeEndpoints.sfw.eightball}`
+			);
+			const json = await image.json();
 
-		if (!json.fact) {
-			throw new Error(error);
+			if (!json.url) {
+				throw new Error(error);
+			}
+
+			return json.url;
 		}
 
-		return json.fact;
-	}
+		async fact() {
+			const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.fact}`);
+			const json = await image.json();
+
+			if (!json.fact) {
+				throw new Error(error);
+			}
+
+			return json.fact;
+		}
+		async animeMemes(){
+			let img = await fetch(
+						`https://www.reddit.com/r/Animemes.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
+		  async changemymind(Word){
+			let img = await fetch(`https://nekobot.xyz/api/imagegen?type=changemymind&text=${Word}`);
+
+        let json = await img.json();
+
+		if (!json.message) throw new Error("Something Went Wrong, Try Again Later!");
+		return json.message;
+		  }
+		  async trumptweet(Word){
+			let img = await fetch(`https://nekobot.xyz/api/imagegen?type=trumptweet&text=${Word}`);
+
+        let json = await img.json();
+
+		if (!json.message) throw new Error("Something Went Wrong, Try Again Later!");
+		return json.message;
+		  }
 
 	/**
 	 *
@@ -352,55 +435,6 @@ class Neko {
 		}
 
 		return json.owo;
-	}
-
-	async holo() {
-		const image = await fetch('https://nekobot.xyz/api/image?type=holo');
-		const json = await image.json();
-		if (!json.message) {
-			throw new Error(error);
-		}
-		return json.message;
-	}
-	async wink() {
-		const image = await fetch('https://some-random-api.ml/animu/wink');
-		const json = await image.json();
-		if (!json.link) {
-			throw new Error(error);
-		}
-		return json.link;
-	}
-	async punch() {
-		const image = await fetch('https://neko-love.xyz/api/v1/punch');
-		const json = await image.json();
-		if (!json.url) {
-			throw new Error(error);
-		}
-		return json.url;
-	}
-	async cry() {
-		const image = await fetch('https://neko-love.xyz/api/v1/cry');
-		const json = await image.json();
-		if (!json.url) {
-			throw new Error(error);
-		}
-		return json.url;
-	}
-	async coffee() {
-		const image = await fetch('https://nekobot.xyz/api/image?type=coffee');
-		const json = await image.json();
-		if (!json.message) {
-			throw new Error(error);
-		}
-		return json.message;
-	}
-	async kanna() {
-		const image = await fetch('https://nekobot.xyz/api/image?type=kanna');
-		const json = await image.json();
-		if (!json.message) {
-			throw new Error(error);
-		}
-		return json.message;
 	}
 }
 
