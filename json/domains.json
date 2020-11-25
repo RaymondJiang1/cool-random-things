@@ -1,4 +1,6 @@
 {
 	"nekoslife": "https://nekos.life/api/v2",
-	"noapikey": "https://no-api-key.com/api/v1"
+	"noapikey": "https://no-api-key.com/api/v1",
+	"somerandomapi": "https://some-random-api.ml",
+	"nekobot": "https://nekobot.xyz/api"
 }

@@ -309,54 +309,7 @@ class Neko {
 
 		return json.owo;
 	}
-  async holo(){
-    const image = await fetch("https://nekobot.xyz/api/image?type=holo");
-    const json = await main.json();
-    if (!json.message) {
-			throw new Error(error);
-		}
-    return json.message;
-  }
-  async wink(){
-    const image = await fetch("https://some-random-api.ml/animu/wink");
-    const json = await main.json();
-    if (!json.link) {
-			throw new Error(error);
-		}
-    return json.link;
-  }
-  async punch(){
-    const image = await fetch("https://neko-love.xyz/api/v1/punch");
-    const json = await main.json();
-    if (!json.url) {
-			throw new Error(error);
-		}
-    return json.url;
-  }
-  async cry(){
-    const image = await fetch("https://neko-love.xyz/api/v1/cry");
-    const json = await main.json();
-    if (!json.url) {
-			throw new Error(error);
-		}
-    return json.url;
-  }
-  async coffee(){
-    const image = await fetch("https://nekobot.xyz/api/image?type=coffee");
-    const json = await main.json();
-    if (!json.message) {
-			throw new Error(error);
-		}
-    return json.message;
-  }
-  async kanna(){
-    const image = await fetch("https://nekobot.xyz/api/image?type=kanna");
-    const json = await main.json();
-    if (!json.message) {
-			throw new Error(error);
-		}
-    return json.message;
-  }
+
 	async eightball() {
 		const image = await fetch(
 			`${nekoslife}${nekoslifeEndpoints.sfw.eightball}`
@@ -399,6 +352,55 @@ class Neko {
 		}
 
 		return json.owo;
+	}
+
+	async holo() {
+		const image = await fetch('https://nekobot.xyz/api/image?type=holo');
+		const json = await image.json();
+		if (!json.message) {
+			throw new Error(error);
+		}
+		return json.message;
+	}
+	async wink() {
+		const image = await fetch('https://some-random-api.ml/animu/wink');
+		const json = await image.json();
+		if (!json.link) {
+			throw new Error(error);
+		}
+		return json.link;
+	}
+	async punch() {
+		const image = await fetch('https://neko-love.xyz/api/v1/punch');
+		const json = await image.json();
+		if (!json.url) {
+			throw new Error(error);
+		}
+		return json.url;
+	}
+	async cry() {
+		const image = await fetch('https://neko-love.xyz/api/v1/cry');
+		const json = await image.json();
+		if (!json.url) {
+			throw new Error(error);
+		}
+		return json.url;
+	}
+	async coffee() {
+		const image = await fetch('https://nekobot.xyz/api/image?type=coffee');
+		const json = await image.json();
+		if (!json.message) {
+			throw new Error(error);
+		}
+		return json.message;
+	}
+	async kanna() {
+		const image = await fetch('https://nekobot.xyz/api/image?type=kanna');
+		const json = await image.json();
+		if (!json.message) {
+			throw new Error(error);
+		}
+		return json.message;
 	}
 }
 

@@ -44,5 +44,13 @@
 		"textToBinary": "/binary",
 		"binaryToText": "/binary-text",
 		"coinFlip": "/coin-flip"
+	},
+	"somerandomapiEndpoints": {
+		"koala": "/img/koala",
+		"bird": "/img/birb",
+		"fox": "/img/fox"
+	},
+	"nekobotEndpoints": {
+		"kanna": "/image?type=kanna"
 	}
 }

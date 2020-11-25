@@ -1,7 +1,10 @@
 const fetch = require('node-fetch'),
 	error = 'No image/gif provided from api',
-	{ noapikey } = require('../json/domains.json'),
-	{ noapikeyEndpoints } = require('../json/api_endpoints.json');
+	{ noapikey, somerandomapi } = require('../json/domains.json'),
+	{
+		noapikeyEndpoints,
+		somerandomapiEndpoints,
+	} = require('../json/api_endpoints.json');
 
 class Random {
 	async meme() {
@@ -36,30 +39,6 @@ class Random {
 
 		return json.image;
 	}
-  async koala(){
-    const image = await fetch("https://some-random-api.ml/img/koala");
-    const json = await main.json();
-    if (!json.link) {
-			throw new Error(error);
-		}
-    return json.link;
-  }
-  async birb(){
-    const image = await fetch("https://some-random-api.ml/img/birb");
-    const json = await main.json();
-    if (!json.link) {
-			throw new Error(error);
-		}
-    return json.link;
-  }
-  async fox(){
-    const image = await fetch("https://some-random-api.ml/img/fox");
-    const json = await main.json();
-    if (!json.link) {
-			throw new Error(error);
-		}
-    return json.link;
-  }
 
 	async quote() {
 		const image = await fetch(`${noapikey}${noapikeyEndpoints.quote}`);
@@ -206,6 +185,39 @@ class Random {
 		}
 
 		return json;
+	}
+
+	async koala() {
+		const image = await fetch(
+			`${somerandomapi}${somerandomapiEndpoints.koala}`
+		);
+		const json = await image.json();
+		if (!json.link) {
+			throw new Error(error);
+		}
+		return json.link;
+	}
+
+	async birb() {
+		const image = await fetch(
+			`${somerandomapi}${somerandomapiEndpoints.bird}`
+		);
+		const json = await image.json();
+		if (!json.link) {
+			throw new Error(error);
+		}
+		return json.link;
+	}
+
+	async fox() {
+		const image = await fetch(
+			`${somerandomapi}${somerandomapiEndpoints.fox}`
+		);
+		const json = await image.json();
+		if (!json.link) {
+			throw new Error(error);
+		}
+		return json.link;
 	}
 }
 
