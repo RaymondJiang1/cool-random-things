@@ -382,6 +382,132 @@ class Neko {
 
 			return json.fact;
 		}
+		async chika(){
+			let img = await fetch(
+						`https://www.reddit.com/r/chikafujiwara.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
+		  async zerotwo(){
+			let img = await fetch(
+						`https://www.reddit.com/r/zerotwo.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  } 
+		  async seishunbutayarou(){
+			let img = await fetch(
+						`https://www.reddit.com/r/seishunbutayarou.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
+		  async kaede(){
+			let img = await fetch(
+						`https://www.reddit.com/r/kaede.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
+		  async megumin(){
+			let img = await fetch(
+						`https://www.reddit.com/r/megumin.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
+		  async kaguyashinomiya(){
+			let img = await fetch(
+						`https://www.reddit.com/r/kaguyashinomiya.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
+		  async hayasaka(){
+			let img = await fetch(
+						`https://www.reddit.com/r/hayasaka.json`
+					);
+		
+					const { data } = await img.json();
+		
+					if (!data) throw new Error("Something Went Wrong, Try Again Later!");
+		
+					const Nsfw = data.children.filter((post) => !post.data.over_18); // make it not send no nsfw :D
+		
+					if (!Nsfw.length) throw new Error(`No Animemes images Found, Try Again Later!`);
+		
+					const Post = Nsfw[Math.floor(Math.random() * Nsfw.length)];
+		
+					if (!Post.data.url) throw new Error("Something Went Wrong, Try Again Later!");
+					return Post.data.url;
+		  }
 		async animeMemes(){
 			let img = await fetch(
 						`https://www.reddit.com/r/Animemes.json`
