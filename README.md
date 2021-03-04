@@ -367,4 +367,4 @@ message.channel.send(img)
 let text = await neko.why()
 message.channel.send(text)
 ```
-© RaymondJiang1 && Neko 2020
+© RaymondJiang1 && Neko 2021
