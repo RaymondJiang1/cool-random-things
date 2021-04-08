@@ -9,22 +9,18 @@ class Neko {
 	async smug() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.smug}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async baka() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.baka}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
@@ -33,55 +29,45 @@ class Neko {
 			`${nekoslife}${nekoslifeEndpoints.sfw.tickle}`
 		);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async slap() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.slap}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async poke() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.poke}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async pat() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.pat}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async neko() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.neko}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
@@ -90,22 +76,18 @@ class Neko {
 			`${nekoslife}${nekoslifeEndpoints.sfw.nekoGif}`
 		);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async cat() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.cat}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
@@ -114,33 +96,27 @@ class Neko {
 			`${nekoslife}${nekoslifeEndpoints.sfw.lizard}`
 		);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async kiss() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.kiss}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async hug() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.hug}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
@@ -149,22 +125,18 @@ class Neko {
 			`${nekoslife}${nekoslifeEndpoints.sfw.foxGirl}`
 		);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
 	async feed() {
 		const image = await fetch(`${nekoslife}${nekoslifeEndpoints.sfw.feed}`);
 		const json = await image.json();
-
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
@@ -177,7 +149,6 @@ class Neko {
 		if (!json.url) {
 			throw new Error(error);
 		}
-
 		return json.url;
 	}
 
